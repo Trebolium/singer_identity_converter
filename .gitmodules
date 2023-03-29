@@ -1,0 +1,3 @@
+[submodule "singer-identity-encoder"]
+	path = singer-identity-encoder
+	url = https://github.com/Trebolium/singer-identity-encoder
