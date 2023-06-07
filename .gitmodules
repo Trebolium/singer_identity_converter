@@ -1,3 +1,6 @@
 [submodule "singer-identity-encoder"]
 	path = singer-identity-encoder
 	url = git@github.com:Trebolium/singer-identity-encoder.git
+[submodule "my_utils"]
+	path = my_utils
+	url = git@github.com:Trebolium/my_utils.git
