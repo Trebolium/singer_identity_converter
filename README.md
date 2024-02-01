@@ -1,7 +1,7 @@
 # Singing Voice Conversion
 ## Uses an enhanced version of the [AutoVC framework](https://github.com/auspicious3000/autovc) with many extra features, and an improved loss function.
 
-This repository reflects the research presented in our paper A COMPARATIVE ANALYSIS OF LATENT REGRESSOR LOSSES FOR SINGING VOICE CONVERSION, as submitted to Sound and Music Computing Conference 2023. It is a compilation of the following submodules which facilitate feature generation, training a voice identity encoder, :
+This repository reflects the research presented in our paper [A COMPARATIVE ANALYSIS OF LATENT REGRESSOR LOSSES FOR SINGING VOICE CONVERSION](https://arxiv.org/abs/2302.13678), as submitted to Sound and Music Computing Conference 2023. It is a compilation of the following submodules which facilitate feature generation, training a voice identity encoder, :
 * [singer-identity-encoder](https://github.com/Trebolium/singer-identity-encoder)
 * [autoSvc](https://github.com/Trebolium/autoSvc)
 * [my_utils](https://github.com/Trebolium/my_utils)
@@ -14,7 +14,7 @@ When using this framework to train your own models, please take care to ensure y
 
 ### Initialisation
 
-Before attempting to run any python code, please ensure that you have initialised the submodules by running these two lines in the command-line:
+Before attempting to run any python code, ensure that you have created a virtual environment within which ```pip install -r requirements.txt``` can be run. Then initialise the submodules by running these two lines:
 
 ```
 git submodule init
