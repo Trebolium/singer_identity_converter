@@ -1,4 +1,4 @@
-# Singing Voice Conversion
+# Singing Voice Converter
 ## Uses an enhanced version of the [AutoVC framework](https://github.com/auspicious3000/autovc) with many extra features, and an improved loss function.
 
 This repository reflects the research presented in our paper [A COMPARATIVE ANALYSIS OF LATENT REGRESSOR LOSSES FOR SINGING VOICE CONVERSION](https://arxiv.org/abs/2302.13678), as submitted to Sound and Music Computing Conference 2023. It is a compilation of the following submodules which facilitate feature generation, training a voice identity encoder, :
