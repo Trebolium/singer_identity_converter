@@ -42,7 +42,9 @@ Using the SIE lookup tables generated from the previous step, we can now train A
 
 ### Training phase
 
-You can either keep the default paths variables unchanged, use a pretrained SIE model (by downloading it to the ```singer-identity-encoder/sie_models``` directory, or training it yuorself). If use a pretrained model. change the varialbe ```SIE_model_path``` in the ```train_params.py``` file to point towards the directories you require. Please note that the values for size of training iterations (```max_cycle_iters```) and max iterations (```max_iters```) are extremely small, and will likely need to be adjusted for any training towards useful inference. In any case, running ```python main.py``` will train the AutoSvc network. 
+Running ```python autoSvc/main.py``` will train the AutoSvc network.
+
+You can either keep the default paths variables unchanged, use a pretrained SIE model (by downloading it to the ```singer-identity-encoder/sie_models``` directory, or training it yuorself). If use a pretrained model, change the varialbe ```SIE_model_path``` in the ```train_params.py``` file to point towards the directories you require. Please note that the values for size of training iterations (```max_cycle_iters```) and max iterations (```max_iters```) are extremely small, and will likely need to be adjusted for any training towards useful inference.  
 
 ### Conversion phase
 
