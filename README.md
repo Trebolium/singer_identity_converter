@@ -10,16 +10,12 @@ This repository comes with a small set of audio files for training and validatio
 
 When using this framework to train your own models, please take care to ensure you examine the argparse argument options, or the parameter files. The current default values are set to make the repository work quickly.
 
-## Instructions
+## Initialisation
 
-### Initialisation
+Before attempting to run any python code, ensure that you have created a virtual environment within which ```pip install -r requirements.txt``` can be run. Then initialise the submodules by running ```git submodule update --init```.
 
-Before attempting to run any python code, ensure that you have created a virtual environment within which ```pip install -r requirements.txt``` can be run. Then initialise the submodules by running these two lines:
+## Singer Identity Encoder Model
 
-```
-git submodule init
-git submodule update
-```
 ### Generate audio features
 
 To convert the audio files to melspectrogram features, run ```python singer-identity-encoder/audio_to_features.py```. This will automatically save the feature numpy files to ```singer-identity-encoder/damp_example_feats```.
@@ -34,7 +30,12 @@ Now that the SIE model is trained, we can generate an average SIE for each singe
 
 ### Plot your embeddings on a 2D plane
 
-Plot the embeddings of each singer you have generated SIEs for on a 2D plane to verify salience between singers, implying how robust the SIEs descriminating capabilities are. To do this, run ```python singer-identity-encoder/plot_embs_tsne.py```. Output visualisations are sent to their default location at ```./voice_embs_visuals_metadata/default_model/damp_example_feats/val```. Users can use this script's argparse flags to set the path for the directory containing the pickled SIE data.
+Plot the embeddings of each singer you have generated SIEs for on a 2D plane to verify salience between singers, implying how robust the SIEs descriminative capabilities are. To do this, run ```python singer-identity-encoder/plot_embs_tsne.py```. Output visualisations are sent to their default location at ```./voice_embs_visuals_metadata/default_model/damp_example_feats/val```. Users can use this script's argparse flags to set the path for the directory containing the pickled SIE data. This script is made to work specifically with the Vocadito, VCTK, or DAMP dataset, and requires the relevant csv files relating to gender (a csv file containing information for the supplied example dataset is provided).
 
-### Train autoSvc
+## AutoSVC model
 
+This particular version of AutoVC has been adapted from the work documented in [(Qian et. al, 2019)](https://proceedings.mlr.press/v97/qian19c/qian19c.pdf), thanks to their supplied respository, [AutoVC](https://github.com/auspicious3000/autovc).
+
+### Training phase
+
+Using the SIE lookup tables generated from the previous step, we can now train AutoSVC, which is designed to take a source and target singer during test time, and superimpose the identity features of the target singer onto the source singer, thereby achieving singing voice identity conversion.
