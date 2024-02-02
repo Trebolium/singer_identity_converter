@@ -4,3 +4,6 @@
 [submodule "my_utils"]
 	path = my_utils
 	url = git@github.com:Trebolium/my_utils.git
+[submodule "autoSvc"]
+	path = autoSvc
+	url = https://github.com/Trebolium/autoSvc.git
